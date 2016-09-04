@@ -20,6 +20,7 @@ public class Main {
             implementacionSelecionada = entrada.nextLine();
         }
 
+        Set<String> developersSet = Factory.getSet(implementacionSelecionada);
         Set<String> javaSet = Factory.getSet(implementacionSelecionada);
         Set<String> webSet = Factory.getSet(implementacionSelecionada);
         Set<String> cellSet = Factory.getSet(implementacionSelecionada);
@@ -33,6 +34,8 @@ public class Main {
             if (entrada.hasNext()){
                 nombre = entrada.nextLine();
                 nombre = nombre.toLowerCase();  // Colocarlo en minusculas para comparacion
+                assert developersSet != null;
+                developersSet.add(nombre);
             }
 
 
